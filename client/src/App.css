@@ -1,0 +1,334 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* This ensures padding doesn't affect the actual box size */
+}
+
+html, body {
+  width: 100%;
+  height: 100%; /* This ensures your body takes up the full height of the screen */
+  margin: 0;
+}
+
+/* This class is added to ensure that the root div of your React app fills the viewport */
+#root, .container {
+  min-height: 100vh; /* Minimum height of 100% of the viewport height */
+  background: url('./images/back5.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make sure the container doesn't have any default padding or margin */
+.container {
+  padding: 0;
+  margin: 0 auto; /* Center the container */
+  flex: 1; /* This allows the container to expand */
+}
+
+.hero-section {
+  background-size: cover;
+  padding: 2em 0 6em; /* Reduced top padding and increased bottom padding */
+  color: white;
+}
+
+
+
+/* Style adjustments for the nav to match soccer club colors */
+nav.nav .nav-link {
+  color: #fff; /* White text for nav links */
+  padding: 0.5em 1em;
+  transition: color 0.3s;
+  text-decoration: none; /* Removes underline from links */
+  background-color: transparent; /* Removes any background color */
+}
+
+nav.nav .nav-link:hover {
+  color: #ccc; /* Slightly lighter color on hover */
+  background-color: transparent; /* Ensures no background color on hover */
+}
+
+/* Footer styles */
+.footer {
+  background-color: #004d40; /* Dark green background */
+  color: white;
+  padding: 2em 0;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+/* Additional styles for cards */
+.home-page .col-md-4 {
+  display: flex;
+  justify-content: center;
+}
+
+.home-page .btn-primary {
+  background-color: #4d94ff; /* Bright blue to stand out */
+  border-radius: 0.5em; /* Rounded corners for the cards */
+  padding: 1em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.home-page .btn-primary:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.home-page .row {
+  display: flex;
+  flex-wrap: wrap; /* This allows items to wrap to the next line */
+  justify-content: center; /* This will center the items on the line */
+  gap: 20px; /* This adds space between the cards */
+}
+
+.home-page .col-md-4 {
+  flex-basis: calc(50% - 10px); /* Adjust this value to increase/decrease card size */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem; /* Adjust space between cards if necessary */
+}
+
+/* Set the default text color for the whole website */
+body, button, input, textarea, h1, h2, h3, h4, h5, h6, p, a, .nav-link {
+  color: white; /* This will set the text color to white */
+}
+
+a, .nav-link {
+  text-decoration: none; /* Optional: Removes underline from links */
+  color: white; /* Ensures that all links are also white */
+}
+
+
+/* Ensure that form placeholders are visible */
+::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Light white color for placeholders */
+}
+
+input::placeholder {
+  color: grey; /* This will change the placeholder text color to grey */
+}
+
+.custom-select {
+  width: 30%; 
+}
+
+/* Adjust the .row styling to stack elements vertically */
+.button-container .row {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center buttons horizontally */
+}
+
+/* Update button styles to have a full width for smaller screens */
+.button-container .btn-block {
+  width: 30%; /* Full width */
+  margin-bottom: 1em; /* Add space between buttons */
+  
+}
+
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  height: 80px; 
+  width: auto; 
+  margin-right: 15px; 
+}
+
+
+/* You may also want to ensure the AboutPage container has a padding to prevent text touching the edges */
+.about-page {
+  padding: 2em;
+}
+
+.about-section-background {
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  padding: 2em; /* Add some padding */
+  border-radius: 10px; /* Optional: rounded corners */
+  margin: 1em 0; /* Add some vertical space before and after the section */
+}
+
+
+/* Card styles */
+.home-page .col-md-4 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem; /* Adjust space between cards if necessary */
+}
+
+/* Style for the cards, using a gradient background */
+.home-page .btn-primary {
+  background: linear-gradient(160deg, #003366 0%, #004d40 100%); /* Dark blue to dark green gradient */
+  color: #ffffff; /* White text */
+  border: none; /* Removes the border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 1em;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.home-page .btn-primary:hover {
+  transform: translateY(-5px); /* Slight raise effect on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Increased shadow on hover for more depth */
+}
+
+/* You may need to adjust the image-size class if the images are too large/small */
+.image-size {
+  width: 100px; /* Adjust width as needed */
+  height: auto; /* Keep height proportional */
+  margin-bottom: 1rem; /* Space between the image and the text */
+}
+
+.btn-info {
+  background-color: #007bff; /* Choose a color that matches your theme */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Top/bottom padding and left/right padding */
+  font-size: 1em; /* Adjust the font size as needed */
+  border: 2px solid transparent; /* Adds a border that can change color on hover */
+  border-radius: 25px; /* Fully rounded edges */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.btn-info:hover, .btn-info:focus {
+  background-color: #0056b3; /* Darker shade on hover/focus */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Larger shadow on hover/focus */
+  transform: translateY(-2px); /* Slightly raise the button when hovered/focused */
+}
+
+.rounded-table {
+  border-collapse: separate; /* Required for border-radius to take effect on tables */
+  border-spacing: 0;
+  border-radius: 9px; /* Adjust this value to increase or decrease the roundness */
+  overflow: hidden; /* Ensures the inner content doesn't overflow the rounded corners */
+}
+
+
+
+/* Adjusted button styles to be less rounded and have a pleasing color */
+.button-container .btn-info {
+  background: linear-gradient(160deg, #005577 0%, #006d55 100%); /* Adjusted gradient for buttons */
+  color: #ffffff; /* White text color for better contrast and readability */
+  padding: 12px 24px; /* Slightly more padding for a balanced look */
+  font-size: 1rem; /* Standard font size */
+  border: none; /* No border for a cleaner look */
+  border-radius: 8px; /* Less rounded corners compared to the 25px used before */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.button-container .btn-info:hover, .button-container .btn-info:focus {
+  background: linear-gradient(160deg, #004455 0%, #005d45 100%); /* Darker gradient on hover/focus */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slightly larger shadow on hover/focus */
+  transform: translateY(-2px); /* Small raise effect on hover/focus */
+}
+
+
+
+
+.player-card {
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.player-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.player-card-image-container {
+  flex-shrink: 0; /* Prevent image container from shrinking */
+  width: 120px; /* Fixed width for the image */
+  height: 190px; /* Fixed height for the image */
+  /*border-radius: 50%; /* Circular image */
+  overflow: hidden; /* Hide overflow */
+  margin-right: 20px; /* Space between image and details */
+}
+
+.player-image {
+  width: 100%;
+  height: auto;
+  display: block; /* Remove any extra space below the image */
+}
+
+.player-card-info {
+  color: white; /* White text for readability */
+}
+
+.player-card-name {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.player-card-detail {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+
+
+.player-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* This adds space between the cards */
+}
+
+.player-card {
+  flex: 0 1 calc(33.333% - 20px); /* Subtract the gap from the percentage */
+  display: flex;
+  flex-direction: column; /* Stack the card content vertically */
+  align-items: center; /* Center the content */
+  background-color: rgba(0, 0, 0, 0.7); 
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 10px 0; /* Margin top and bottom */
+  max-width: 300px; /* Maximum width of the cards */
+}
+
+.player-card img {
+  width: 100%; /* Make image responsive within the container */
+  height: auto;
+  border-radius: 10px; /* Rounded corners for the images */
+}
+
+/* Ensure images scale down on smaller screens */
+@media (max-width: 1200px) {
+  .player-card {
+    flex: 0 1 calc(50% - 20px); /* Show 2 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .player-card {
+    flex: 0 1 100%; /* Stack cards on small screens */
+  }
+}
+
+
+/* App.css */
+
+.large-font {
+  font-size: 18px; /* Adjust the value to your preferred font size */
+}
+
+.input-field {
+  color: black;
+  margin-right: 20px; /* Add a right margin to create gaps between fields */
+}
